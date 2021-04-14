@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/projectSettingsUpdater.xml
+/contentModel.xml
+/.idea.02-building-a-graph.iml
+# Datasource local storage ignored files
+/../../../../../../../../../../../:\Users\Vincent\dev\Unity\CatlikeCoding\Basics\02-building-a-graph\.idea\.idea.02-building-a-graph\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
