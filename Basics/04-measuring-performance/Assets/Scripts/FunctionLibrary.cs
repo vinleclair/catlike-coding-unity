@@ -66,13 +66,11 @@ public static class FunctionLibrary {
    
     private static Vector3 Knot (float u, float v, float t)
     {
-        u *= PI;
-        v *= t;
-        const int r = 5;
+        u = u * PI + Sin(0.5f * t);
         Vector3 p;
-        p.x = r * Sin(3 * u) / (2 + Cos(v));
-        p.y = (Sin(u) + 2 * Sin(2 * u)) / (2 + Cos(v + PI * 2 / 3));
-        p.z = (Cos(u) - 2 * Cos(2 * u)) * (2 + Cos(v)) * (2 + Cos(v + PI * 2 / 3)) / 4;
+        p.x = Sin(u) + 2 * Sin(2 * u);
+        p.y = Cos(u) - 2 * Cos(2 * u);
+        p.z = -Sin(3 * u);
         return p;
     }
 }
