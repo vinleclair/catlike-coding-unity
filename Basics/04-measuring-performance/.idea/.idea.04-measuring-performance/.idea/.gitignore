@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/contentModel.xml
+/.idea.04-measuring-performance.iml
+/modules.xml
+# Datasource local storage ignored files
+/../../../../../../../../../../../:\Users\Vincent\dev\Unity\CatlikeCoding\Basics\04-measuring-performance\.idea\.idea.04-measuring-performance\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
