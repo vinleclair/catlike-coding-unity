@@ -1,20 +1,29 @@
-using System;
-using UnityEngine;
+﻿using UnityEngine;
 using static UnityEngine.Mathf;
 
-public static class FunctionLibrary {
+public static class FunctionLibrary
+{
+    public delegate Vector3 Function(float u, float v, float t);
 
-    public delegate Vector3 Function (float u, float v, float t);
-
-    public enum FunctionName { Wave, MultiWave, Ripple, Sphere, Torus, Knot }
-
-    private static readonly Function[] Functions = { Wave, MultiWave, Ripple, Sphere, Torus, Knot };
-
-    public static Function GetFunction (FunctionName name) {
-        return Functions[(int)name];
+    public enum FunctionName
+    {
+        Wave,
+        MultiWave,
+        Ripple,
+        Sphere,
+        Torus,
+        Knot
     }
 
-    private static Vector3 Wave (float u, float v, float t) {
+    private static readonly Function[] Functions = {Wave, MultiWave, Ripple, Sphere, Torus, Knot};
+
+    public static Function GetFunction(FunctionName name)
+    {
+        return Functions[(int) name];
+    }
+
+    private static Vector3 Wave(float u, float v, float t)
+    {
         Vector3 p;
         p.x = u;
         p.y = Sin(PI * (u + v + t));
@@ -22,7 +31,8 @@ public static class FunctionLibrary {
         return p;
     }
 
-    private static Vector3 MultiWave (float u, float v, float t) {
+    private static Vector3 MultiWave(float u, float v, float t)
+    {
         Vector3 p;
         p.x = u;
         p.y = Sin(PI * (u + 0.5f * t));
@@ -33,7 +43,8 @@ public static class FunctionLibrary {
         return p;
     }
 
-    private static Vector3 Ripple (float u, float v, float t) {
+    private static Vector3 Ripple(float u, float v, float t)
+    {
         var d = Sqrt(u * u + v * v);
         Vector3 p;
         p.x = u;
@@ -43,7 +54,8 @@ public static class FunctionLibrary {
         return p;
     }
 
-    private static Vector3 Sphere (float u, float v, float t) {
+    private static Vector3 Sphere(float u, float v, float t)
+    {
         var r = 0.9f + 0.1f * Sin(PI * (6f * u + 4f * v + t));
         var s = r * Cos(0.5f * PI * v);
         Vector3 p;
@@ -53,7 +65,8 @@ public static class FunctionLibrary {
         return p;
     }
 
-    private static Vector3 Torus (float u, float v, float t) {
+    private static Vector3 Torus(float u, float v, float t)
+    {
         var r1 = 0.7f + 0.1f * Sin(PI * (6f * u + 0.5f * t));
         var r2 = 0.15f + 0.05f * Sin(PI * (8f * u + 4f * v + 2f * t));
         var s = r2 * Cos(PI * v) + r1;
@@ -63,8 +76,8 @@ public static class FunctionLibrary {
         p.z = s * Cos(PI * u);
         return p;
     }
-   
-    private static Vector3 Knot (float u, float v, float t)
+
+    private static Vector3 Knot(float u, float v, float t)
     {
         u = u * PI + Sin(0.5f * t);
         Vector3 p;
