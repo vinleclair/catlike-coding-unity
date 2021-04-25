@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/contentModel.xml
+/projectSettingsUpdater.xml
+/.idea.05-compute-shaders.iml
+# Datasource local storage ignored files
+/../../../../../../../../../../../:\Users\Vincent\dev\Unity\CatlikeCoding\Basics\05-compute-shaders\.idea\.idea.05-compute-shaders\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
